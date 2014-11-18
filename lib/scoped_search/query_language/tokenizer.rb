@@ -6,7 +6,7 @@ module ScopedSearch::QueryLanguage::Tokenizer
   KEYWORDS = { 'and' => :and, 'or' => :or, 'not' => :not, 'set?' => :notnull, 'has' => :notnull, 'null?' => :null,  'before' => :lt, 'after' => :gt, 'at' => :eq }
 
   # Every operator the language supports.
-  OPERATORS = { '&' => :and, '|' => :or, '&&' => :and, '||' => :or, '-'=> :not, '!' => :not, '~' => :like, '!~' => :unlike,
+  OPERATORS = { '&' => :and, '|' => :or, '&&' => :and, '||' => :or, '-'=> :not, '!' => :not, '~' => :like, ':' => :like, '!~' => :unlike,
       '=' => :eq, '==' => :eq, '!=' => :ne, '<>' => :ne, '>' => :gt, '<' => :lt, '>=' => :gte, '<=' => :lte, '^' => :in, '!^' => :notin }
 
   # Tokenizes the string and returns the result as an array of tokens.
